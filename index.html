@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/59c7e222cf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <title>Decodificador</title>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+
+            <div class="header-logo">
+            <a href="#" alt="alura site">
+                <i class="fa-brands fa-amilia fa-3x"></i>
+            </a>
+            </div>
+
+            <div class="header-titulo">
+                <h1>Alura Challenge 1</h1>
+                <h2>Decodificador / Codificador</h2>
+            </div>
+            
+                <nav class="header-nav">
+                    <ul>
+                        <li><a href="#"><i class="fa-brands fa-linkedin fa-xl"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-github-square fa-xl"></i></a></li>
+                        <li><a href="#"><i class="fa-brands fa-codepen fa-xl"></i></a></li>
+                    </ul>                    
+                </nav>
+        </div>
+    </header>
+    <main>
+        <div class="main-container">
+            
+            <div class="cripto-container">
+                
+                <!-- <h1>Criptografar</h1> -->
+                <div class="cripto-entrada">
+                    <textarea id="txt-cripto" class="txt-cripto" placeholder="Digite seu texto"></textarea>
+                </div>
+
+                <div class="btn-container1">
+                    <p class="help">! Apenas letras minúsculas e sem acento.</p>
+                    <button id="btn-cripto" onclick="criptografar()">Cripto!</button>
+                    <button id="btn-decripto" onclick="descriptografar()">Descripto!</button>
+                </div>
+
+            </div>
+            
+            <div class="cripto-container">
+                
+                <textarea id="txt-decripto" class="txt-decripto" readonly></textarea>
+                
+                <div class="btn-container">
+                    <button id="btn-copy" onclick="copiarMsg()">Copiar!</button>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+    <footer class="footer">        
+        <div class="footer-copyright">
+            <p>Desenvolvido por Felipe F.</p>
+        </div>
+        <div class="footer-links">
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#"><i class="fa-brands fa-github-square"></i></a>
+            <a href="#"><i class="fa-brands fa-codepen"></i></a>           
+        </div>
+    </footer>
+    <script src="decodificador.js"></script>
+</body>
+</html>
