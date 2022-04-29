@@ -1,0 +1,155 @@
+/*fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@900&display=swap');
+
+/*gobal*/
+* {
+    box-sizing: border-box;
+}
+
+body, h1, h2, p, ul, li, a {
+    margin: 0;
+}
+
+body {
+    color: #222222;
+}
+
+a {
+    text-decoration: none;
+    color: #222222;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+textarea {
+    resize: none;
+}
+
+/*cores*/
+
+/*header*/
+.header-container {
+    border-bottom: 2px solid tomato;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+.header-container h1, h2, h4 {
+    font-family: 'roboto', sans-serif;
+    color: #7c7c7c;
+}
+
+.header-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.header-nav a{
+    display: block;
+    padding: 5px;
+}
+
+.header-logo h4 {
+    margin-top: 0;
+}
+
+/*main*/
+.main-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 128px; /*diminuir no @media*/
+    align-items: center;
+    justify-content: center;
+}
+
+.txt-cripto, .txt-decripto {
+    font-family: 'roboto mono', monospace;
+    font-size: 1em;
+    outline: none;
+    padding: 10px;
+    color: #7c7c7c;  
+}
+
+.txt-cripto {
+    width: 300px;
+    height: 200px;
+    border: none;
+    border-radius: 8px;
+}
+
+.txt-cripto::placeholder{
+    font-family: 'Roboto Mono', monospace;
+    color: teal;
+    font-style: italic;
+}
+
+.btn-container1 {
+    display: block;
+    text-align: center;
+}
+
+.btn-container1 p {
+    font-family: 'Roboto Mono', monospace;
+    font-size: .75em;
+    margin-bottom: 10px;
+}
+
+.txt-decripto {
+    width: 300px;
+    height: 350px;
+    /* border: none; */
+    border-radius: 8px;
+}
+
+.btn-container {
+    display: block;
+    text-align: center;
+}
+
+#btn-cripto, #btn-decripto, #btn-copy  {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2em;
+    width: 40%;
+    border: 0;
+    margin: 0 4px 0 4px;
+    padding: .2em 1em;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    transition: .5s all;
+    cursor: pointer;
+}
+
+#btn-cripto:hover, #btn-decripto:hover, #btn-copy:hover {
+    background: darkgray; /*cor teste*/
+    /* transform: scale(1.2); */
+}
+
+/*footer*/
+.footer {
+    border-top: 2px solid tomato;
+    border-bottom: 2px solid tomato;
+    font-family: 'Roboto Mono', monospace;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px 0;
+    display: flex;
+    flex-flow: column wrap;
+    row-gap: 8px;
+    align-items: center;
+}
