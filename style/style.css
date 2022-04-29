@@ -122,7 +122,7 @@ textarea {
     text-align: center;
 }
 
-#btn-cripto, #btn-decripto, #btn-copy  {
+.btn-style  {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
     width: 40%;
@@ -135,7 +135,7 @@ textarea {
     cursor: pointer;
 }
 
-#btn-cripto:hover, #btn-decripto:hover, #btn-copy:hover {
+.btn-style:hover {
     background: darkgray; /*cor teste*/
     /* transform: scale(1.2); */
 }
