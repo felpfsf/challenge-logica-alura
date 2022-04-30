@@ -1,17 +1,27 @@
-/*fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@900&display=swap');
+/* ---------------------- fonts ---------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto&display=swap');
 
-/*gobal*/
+/* ---------------------- gobal ----------------------- */
 * {
     box-sizing: border-box;
+}
+
+body {
+    color: #222222;
+    background: linear-gradient(150deg,#EEDECF, #6E5B5E);  
 }
 
 body, h1, h2, p, ul, li, a {
     margin: 0;
 }
 
-body {
-    color: #222222;
+body h1, h2 {
+    font-family: 'roboto', sans-serif;
+    color: #525558;
+}
+
+body p, span {
+    font-family: 'roboto mono', monospace;    
 }
 
 a {
@@ -29,30 +39,48 @@ img {
 }
 
 textarea {
+    font-family: 'roboto mono', monospace;
     resize: none;
 }
 
-/*header*/
+/* ---------------------- header ----------------------- */
 .header-container {
-    border-bottom: 2px solid tomato;
+    border-bottom: 2px solid #AB7C73;
     max-width: 960px;
     margin: 0 auto;
     padding: 10px 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
 }
 
-.header-container h1, h2, h4 {
-    font-family: 'roboto', sans-serif;
+.header-container h1 {
+    font-weight: bold;
+    color: #525558;
+}
+
+.header-container h2 {
+    font-weight: 300;
     color: #7c7c7c;
 }
 
-.header-nav ul {
+/* .header-nav ul {
     display: flex;
     flex-wrap: wrap;
+} */
+
+/* .header-titulo {
+    text-align: center;
+    background: tan; 
+    flex-grow: 1 2 160px; 
+} */
+
+.header-nav {
+    display: flex;
+    flex-wrap: wrap;
+    /* background: #AB7C73; */
 }
 
 .header-nav a{
@@ -60,28 +88,24 @@ textarea {
     padding: 5px;
 }
 
-.header-logo h4 {
-    margin-top: 0;
-}
-
-/*main*/
+/* ---------------------- main ----------------------- */
 .main-container {
     max-width: 960px;
     margin: 0 auto;
     padding: 15px 0;
     display: flex;
     flex-flow: row wrap;
-    gap: 128px; /*diminuir no @media*/
+    gap: 128px; 
     align-items: center;
     justify-content: center;
 }
 
+/* ---------------------- input do usuário ---------------------- */
 .txt-cripto, .txt-decripto {
-    font-family: 'roboto mono', monospace;
     font-size: 1em;
     outline: none;
     padding: 10px;
-    color: #7c7c7c;  
+    color: #525558;  
 }
 
 .txt-cripto {
@@ -89,41 +113,43 @@ textarea {
     height: 200px;
     border: none;
     border-radius: 8px;
+    background: transparent;
 }
 
-.txt-cripto::placeholder{
-    font-family: 'Roboto Mono', monospace;
+/* .txt-cripto::placeholder{
     color: teal;
     font-style: italic;
-}
-
-.btn-container1 {
-    display: block;
-    text-align: center;
-}
-
-.btn-container1 p {
-    font-family: 'Roboto Mono', monospace;
-    font-size: .75em;
-    margin-bottom: 10px;
-}
-
-.txt-decripto {
-    width: 300px;
-    height: 350px;
-    /* border: none; */
-    border-radius: 8px;
-}
+} */
 
 .btn-container {
     display: block;
     text-align: center;
 }
 
+.btn-container p {
+    font-size: .75em;
+    margin-bottom: 10px;
+}
+
+/*---------------------- área do resultado ----------------------*/
+
+.txt-decripto {
+    width: 300px;
+    height: 350px;
+    border: 1px dashed #6E5B5E;
+    background: transparent;
+    border-radius: 8px;
+}
+
+.btn-copy-container {
+    /* display: block; */
+    text-align: center;
+}
+
 .btn-style  {
-    font-family: 'Roboto', sans-serif;
     font-size: 1.2em;
-    width: 40%;
+    font-weight: bold;
+    height: 50px;
     border: 0;
     margin: 0 4px 0 4px;
     padding: .2em 1em;
@@ -133,16 +159,27 @@ textarea {
     cursor: pointer;
 }
 
+.btn-cripto {
+    background: #D6B5AB;
+}
+
+.btn-decripto {
+    background: #AB7C73;
+}
+
+.btn-copy {
+    background: #D6B5AB;
+}
+
 .btn-style:hover {
-    background: darkgray; /*cor teste*/
+    background: #EEDECF; /*cor teste*/
     /* transform: scale(1.2); */
 }
 
-/*footer*/
+/* ---------------------- footer ----------------------- */
 .footer {
-    border-top: 2px solid tomato;
-    border-bottom: 2px solid tomato;
-    font-family: 'Roboto Mono', monospace;
+    border-top: 2px solid #AB7C73;
+    /* border-bottom: 2px solid #AB7C73; */
     max-width: 960px;
     margin: 0 auto;
     padding: 15px 0;
@@ -151,3 +188,55 @@ textarea {
     row-gap: 8px;
     align-items: center;
 }
+
+
+/* ---------------------- responsividade ----------------------- */
+
+@media only screen and (max-width: 539px) {
+
+    .header-container h2 {
+        margin-top: 8px;
+    }
+
+    .header-nav {
+        margin-top: 10px;
+    }
+
+    .header-nav a {
+        margin-right: 16px;
+    }
+
+    .main-container {
+        gap: 32px;
+    }
+
+    .descripto-label {
+        display: block;
+        margin: 0 0 16px 0;
+        text-align: center;
+    }
+
+    .display-label {
+        display: none;
+        /* visibility: hidden; */
+    }
+
+    .display-none {
+        display: none;
+    }
+  }
+
+  @media only screen and (min-width: 540px) {
+
+    .descripto-label {
+        display: block;
+        margin: 0 0 16px 0;
+        text-align: center;
+    }
+
+    .display-label {
+        display: none;
+        /* visibility: hidden; */
+    }
+
+  }

@@ -32,9 +32,8 @@
 
 // ***** Declarações de Variáveis *****
 
+// Expressão Regular
 const checador = /^[a-z\s]+$/; // Expressão que irá checar se a string está de acordo com a regra proposta
-
-
 
 // ***** Entrada e Saída *****
 let msg_entrada = document.getElementById("txt-cripto");
@@ -45,68 +44,83 @@ let btn_cripto = document.getElementById("btn-cripto");
 let btn_decripto = document.getElementById("btn-decripto");
 let btn_copiartxt = document.getElementById("btn-copy");
 
+// ***** Elementos que serão exibidos após a ação *****
+let decript_box = document.getElementById("decript-box");
+let cripto_titulo = document.getElementById("cript-title");
+let decripto_titulo = document.getElementById("decript-title");
+
+
+// ***** Declarações das Funções *****
+
 // Função de criptografar
 function criptografar(){
-
     let check_msg = msg_entrada.value;
-
     if (checador.test(check_msg) == true){   
-
         let cripto_temp = check_msg.replaceAll("e", "enter")
-                                    .replaceAll("i", "imes")
-                                        .replaceAll("a", "ai")
-                                            .replaceAll("u", "ufat")
-                                                 .replaceAll("o", "ober");
-
-
+                                        .replaceAll("i", "imes")
+                                            .replaceAll("a", "ai")
+                                                .replaceAll("u", "ufat")
+                                                    .replaceAll("o", "ober");
         return msg_saida.value = cripto_temp;
-
+                
     } else {
-        alert("Mensagem fora dos padrões (cripto)");
+        alert("Mensagem fora dos padrões, por favor insira os dados corretamente");
     }
 }
 
 // Função de descriptografar
 function descriptografar(){  
-
     let check_msg = msg_entrada.value;
-
-    if (checador.test(check_msg) == true){
-        
+    if (checador.test(check_msg) == true){        
         let msg_decripto_temp = check_msg.replaceAll("enter", "e")
-                                        .replaceAll("imes", "i")
-                                            .replaceAll("ai", "a")
-                                                .replaceAll("ufat", "u")
-                                                    .replaceAll("ober", "o");
-
+                                            .replaceAll("imes", "i")
+                                                .replaceAll("ai", "a")
+                                                    .replaceAll("ufat", "u")
+                                                        .replaceAll("ober", "o");
         return msg_saida.value = msg_decripto_temp;
-
     } else {
-        alert("Mensagem fora dos padrões (decripto)");
+        alert("Mensagem fora dos padrões, por favor insira os dados corretamente");
     }
 }
 
-// Função que limpa os campos de confirmar a ação
+// Funções que limpam os campos após confirmar a ação
+
 function limpa_campo_cripto(){
+    decript_box.classList.remove("display-none");
+/*
+    cripto_titulo.classList.remove("display-label");
+    decripto_titulo.classList.add("display-label");
+*/
+
     criptografar();
     msg_entrada.value = "";
 }
 
 function limpa_campo_decripto(){
+    decript_box.classList.remove("display-none");
+/*
+    decripto_titulo.classList.remove("display-label");
+    cripto_titulo.classList.add("display-label");
+*/
+
     descriptografar();
     msg_entrada.value = "";
 }
 
-// Função que copia a mensagem
+
+// Função que copia a mensagem criptografada / descriptografada e exibe uma alerta caso o campo esteja vazio
+
 function copia_msg() {
-    let copyText = msg_saida;
 
-    copyText.select();
-    
-    navigator.clipboard.writeText(copyText.value);
-
-    alert("Texto copiado " + copyText.value);
-
+    if (msg_saida.value.length == 0) {
+        alert("Campo vazio");
+    } else {
+        let copyText = msg_saida;
+        copyText.select();
+        copyText.focus();
+        navigator.clipboard.writeText(copyText.value);
+        // msg_saida.value = ""; // limpa o campo após copiar a mensagem - na duvida ainda se deve permanecer esse parametro
+    }
 }
 
 
@@ -115,12 +129,15 @@ function copia_msg() {
 // Criptografar
 // btn_cripto.onclick = criptografar;
 btn_cripto.onclick = limpa_campo_cripto;
+// btn_cripto.addEventListener("click", limpa_campo_cripto);
 
 // Descriptografar
 // btn_decripto.onclick = descriptografar;
 btn_decripto.onclick = limpa_campo_decripto;
+// btn_decripto.addEventListener("click", limpa_campo_decripto);
 
 // Copiar Mensagem
 btn_copiartxt.onclick = copia_msg;
+// btn_copiartxt.addEventListener("click", copia_msg);
 
 // Fim
