@@ -19,11 +19,11 @@ Um app frontend que vai encriptografar e descriptografar frases.
            |   A letra "u" é convertida para "ufat"     |   
            x--------------------------------------------x
   
- * REQUISITOS:
+ ## REQUISITOS:
 - Deve funcionar apenas com letras minúsculas.
 - Não devem ser utilizados letras com acentos nem caracteres especiais.
 - Deve ser possível converter uma palavra para a versão criptografada e também retornar uma palavra criptografada para a versão original.
- * EXTRAS:
+ ## EXTRAS:
              - Um botão que copie o texto criptografado para a área de transferência.
   
             x------------------------------------------------------x
@@ -37,6 +37,7 @@ Um app frontend que vai encriptografar e descriptografar frases.
 ## TO DO LIST (29/04/2022)
 - Melhorar a responsividade
 - Alterar o alert no js
+- função copiar não está funcionando em todos na e dispositivos
 - Adicionar mais elementos no design, como cores e fonte
 
 ----------------------------------------------------------------
