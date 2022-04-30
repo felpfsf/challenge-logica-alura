@@ -1,4 +1,4 @@
-/*fonts*/
+/*fonts */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@900&display=swap');
 
 /*gobal*/
@@ -31,8 +31,6 @@ img {
 textarea {
     resize: none;
 }
-
-/*cores*/
 
 /*header*/
 .header-container {

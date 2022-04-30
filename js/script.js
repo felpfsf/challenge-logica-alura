@@ -1,6 +1,6 @@
 /* ****************************************************************************************************************
  *          ALURA - PROGRAMA DE FORMAÇÃO ONE BR - TURMA 2
- *                      PRIMEIRO DESAFIO
+ *                      PRIMEIRO DESAFIO 
  * 
  * Construir um app que criptografa textos com as seguintes chaves
  * 
@@ -20,12 +20,12 @@
  * EXTRAS:
  *            - Um botão que copie o texto criptografado para a área de transferência.
  * 
- *           x----------------------------------------------x
- *           |  Desenvolvido por Felipe F.                  |
- *           |  LinkedIn - www.linkedin.com/in/felipefsf    |
- *           |  Github - https://github.com/felpfsf         |
- *           |  Codepen - https://codepen.io/felpfsf        | 
- *           x----------------------------------------------x
+ *           x------------------------------------------------------x
+ *           |  Desenvolvido por Felipe F.                          |
+ *           |  LinkedIn - https://www.linkedin.com/in/felipefsf    |
+ *           |  Github - https://github.com/felpfsf                 |
+ *           |  Codepen - https://codepen.io/felpfsf                | 
+ *           x------------------------------------------------------x
  * ****************************************************************************************************************/
 
 
@@ -122,3 +122,5 @@ btn_decripto.onclick = limpa_campo_decripto;
 
 // Copiar Mensagem
 btn_copiartxt.onclick = copia_msg;
+
+// Fim
