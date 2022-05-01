@@ -37,6 +37,7 @@ Um app que vai encriptografar e descriptografar frases.
 ## TO DO LIST (30/04/2022)
 
 - Alterar o alert no js
+- Testar uma nova paleta de cor
 
 
 
@@ -51,6 +52,7 @@ Develop an app that only accept small case letters with no special characters to
 ## TO DO LIST (29/04/2022)
 
 - Find another way to alert user in JS
+- Testing a new color pallet
 
 
 
