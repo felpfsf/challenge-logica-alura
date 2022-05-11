@@ -1,0 +1,371 @@
+/*  --------------------->>>>  Reset  <<<<---------------------   */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* original hue blue(227) */
+  --hue: 35;
+
+  --light-blue-100: hsl(var(--hue), 60%, 97%);
+  --light-blue-200: hsl(calc(var(--hue) + 2), 52%, 96%);
+
+  --dark-blue-300: hsl(calc(var(--hue) - 14), 84%, 24%);
+  --dark-blue-400: hsl(calc(var(--hue) - 11), 87%, 20%);
+
+  --gray-400: hsl(210, 9%, 31%);
+  --gray-500: hsl(210, 10%, 23%);
+
+  --logo-color: hsl(calc(var(--hue) + 14), 84%, 24%);
+
+  --header-height: 6.4rem;
+
+  font-size: 62.5%;
+}
+
+/*  --------------------->>>>  Global  <<<<---------------------   */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Popins', sans-serif;
+  font-size: 1.6rem;
+  text-align: center;
+  color: var(--dark-blue-300);
+  background-color: var(--light-blue-100);
+}
+
+a {
+  text-decoration: none;
+}
+
+i {
+  color: var(--gray-500);
+  font-size: 3.2rem;
+}
+
+i:hover {
+  color: var(--dark-blue-400);
+  transition: 0.2s;
+}
+
+ul {
+  list-style: none;
+}
+
+textarea {
+  resize: none;
+}
+
+h2 {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 2.4rem;
+  line-height: 120%;
+  margin-bottom: 1.6rem;
+}
+
+.display-option {
+  display: none;
+}
+
+.wrapper {
+  width: min(50rem, 100%);
+  margin-inline: auto;
+  padding-inline: 2.4rem;
+}
+
+.button-style {
+  font-family: 'Popins', sans-serif;
+  font-size: 1.6rem;
+
+  padding: 2.4rem;
+  border: 0.1rem solid;
+  border-radius: 2.4rem;
+}
+
+.button-style:hover {
+  transition: all 0.75s ease;
+  cursor: pointer;
+}
+
+.button-style:active {
+  filter: brightness(1.3);
+  border: none;
+}
+
+/*  --------------------->>>>  Header  <<<<---------------------   */
+
+header {
+  display: flex;
+  background-color: var(--light-blue-200);
+  /* box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25); */
+}
+
+header .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-top: 2.4rem;
+}
+
+header .wrapper ul {
+  display: flex;
+  gap: 1.6rem;
+}
+
+/* header .img-logo {
+  filter: hue-rotate(180deg);
+} */
+
+/*  --------------------->>>>  Content  <<<<---------------------   */
+
+#content {
+  padding-block: 0;
+  padding-top: var(--header-height);
+}
+
+#content .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+/*  --------------------->>>>  Content | Input <<<<---------------------   */
+
+#content .input-text {
+  font-family: 'Popins', sans-serif;
+  font-size: 2.4rem;
+  color: var(--dark-blue-300);
+
+  outline: none;
+
+  padding: 1rem;
+
+  background: transparent;
+
+  border-radius: 0.8rem;
+  border: none;
+
+  width: 32rem;
+  height: 48rem;
+}
+
+#content .input-text::placeholder {
+  color: var(--dark-blue-300);
+  font-style: italic;
+}
+
+#content .content-input p {
+  font-size: 1.2rem;
+  color: var(--dark-blue-400);
+  text-align: center;
+  margin-bottom: 1.6rem;
+}
+
+#content .content-input i {
+  font-size: 1.6rem;
+  color: red;
+}
+
+/*  --------------------->>>>  Content | Buttons  <<<<---------------------   */
+
+#content .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+#content .buttons .button-criptografar {
+  background: var(--dark-blue-300);
+  color: var(--light-blue-200);
+}
+
+#content .buttons .button-criptografar:hover {
+  background: var(--light-blue-200);
+  color: var(--dark-blue-300);
+}
+
+#content .buttons .button-descriptografar {
+  background: var(--light-blue-200);
+  color: var(--dark-blue-300);
+}
+
+#content .buttons .button-descriptografar:hover {
+  background: var(--dark-blue-300);
+  color: var(--light-blue-200);
+}
+
+/*  --------------------->>>>  Output | Result  <<<<---------------------   */
+
+#content .content-output .content-noMsg {
+  background: #fff;
+  padding: 2.4rem;
+  border-radius: 3.2rem;
+  box-shadow: 0px 24px 32px -8px rgba(red, green, blue, 0.08);
+  margin-bottom: 1.6rem;
+
+  /* display: none; */
+}
+
+#content .content-output .output-result {
+  width: 32rem;
+  height: 48rem;
+
+  margin-inline: auto;
+  padding: 3.2rem;
+
+  background: #fff;
+
+  border-radius: 3.2rem;
+  box-shadow: 0px 24px 32px -8px rgba(red, green, blue, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* gap: 3.2rem; */
+
+  margin-bottom: 4rem;
+}
+
+#content .content-output .output-result p {
+  font-size: 2.4rem;
+  color: var(--gray-400);
+  text-align: left;
+
+  overflow: auto;
+}
+
+/*  --------------------->>>>  Output | Buttons  <<<<---------------------   */
+
+#content .content-output .output-result .button-copy {
+  border: 0.1rem solid var(--dark-blue-300);
+  background: #fff;
+  color: var(--dark-blue-300);
+}
+
+#content .content-output .output-result .button-copy:hover {
+  background: var(--dark-blue-300);
+  color: #fff;
+}
+
+#content .content-output .output-result .button-copy:active {
+  filter: brightness(1.3);
+  border: none;
+}
+
+/*  --------------------->>>>  Footer  <<<<---------------------   */
+
+footer {
+  background-color: var(--light-blue-200);
+  padding-block: 1rem;
+  text-align: center;
+}
+
+footer .logo {
+  display: inline-block;
+  margin-bottom: 2.4rem;
+}
+
+/* footer .img-logo {
+  filter: hue-rotate(180deg);
+} */
+
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 3.2rem;
+
+  margin-top: 2.4rem;
+}
+
+/*  --------------------->>>>  @Media | Tablet | Desktop  <<<<---------------------   */
+
+@media (min-width: 1024px) {
+  /* 
+    -------  header 
+  */
+  header .wrapper {
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  /* 
+    -------  content 
+  */
+  #content .wrapper {
+    width: min(112rem, 100%);
+    display: grid;
+    grid-template-columns: 60.5rem 1fr;
+  }
+
+  #content .content-input {
+    margin-top: 6.5rem;
+  }
+
+  #content .content-input p {
+    text-align: left;
+  }
+
+  #content .input-text {
+    width: 54rem;
+    height: 44rem;
+  }
+
+  #content .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #content .buttons .button-criptografar {
+    width: 24rem;
+  }
+
+  #content .buttons .button-descriptografar {
+    width: 24rem;
+  }
+
+  /* 
+    -------  content  | No message
+  */
+
+  #content .content-output .content-noMsg {
+    width: 32rem;
+    height: 64rem;
+
+    padding-top: 40rem;
+
+    background-image: url('/assets/man-holding-magnifier.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  /* 
+    -------  result
+  */
+
+  #content .content-output .output-result {
+    width: 32rem;
+    height: 64rem;
+    margin-right: 11.5rem;
+  }
+
+  /* 
+    -------  footer
+  */
+  footer .wrapper {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+}
