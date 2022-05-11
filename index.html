@@ -1,74 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/59c7e222cf.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style/style.css">
-    <title>Decodificador de Textos - Alura Challenges</title>
-</head>
-<body>
-
-    <!-- Início do header -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge Lógica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
     <header>
-        <div class="header-container">
-            <div class="header-titulo">
-                <h1>Alura Challenge</h1>
-                <h2>Codificador / Decodificador</h2>
-            </div>
-            <nav class="header-nav"> 
-                <a href="https://www.alura.com.br/" target="_blank" title="Alura | Cursos online de Tecnologia"><i class="fa-brands fa-amilia fa-xl"></i></a>
-                <a href="https://www.linkedin.com/in/felipefsf" title="Felipe Ferreira | LinkedIn" target="_blank"><i class="fa-brands fa-linkedin fa-xl"></i></a>
-                <a href="https://github.com/felpfsf" title="felpfsf | Gihub" target="_blank"><i class="fa-brands fa-github-square fa-xl"></i></a>
-                <a href="https://codepen.io/felpfsf" title="felpfsf | Codepen" target="_blank"><i class="fa-brands fa-codepen fa-xl"></i></a>
-            </nav>
+      <div class="wrapper">
+        <a class="logo" href="#"
+          ><img class="img-logo" src="./assets/logo-alura.svg" alt="Alura's logo" />
+        </a>
+        <div class="menu">
+          <ul class="social-links">
+            <li>
+              <a href="https://www.linkedin.com/in/felipefsf" target="_blank"
+                ><i class="ph-linkedin-logo-thin"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/felpfsf" target="_blank"
+                ><i class="ph-github-logo-thin"></i
+              ></a>
+            </li>
+          </ul>
         </div>
+      </div>
     </header>
 
-    <!-- Início do corpo principal da página -->
-    <main>
-        <div class="main-container">            
-            <div class="cripto-container">                
-                <!-- Área de entrada de dados e botões -->
-                <div class="cripto-entrada">
-                    <textarea id="txt-cripto" class="txt-cripto" placeholder="Digite seu texto aqui"></textarea>
-                </div>
-                <div class="btn-container">
-                    <p class="help">! Apenas letras minúsculas e sem acento.</p>
-                    <button id="btn-cripto" class="btn-style btn-cripto">Criptografar!</button>
-                    <button id="btn-decripto" class="btn-style btn-decripto">Descriptografar!</button>
-                </div>
-            </div>
-
-            <!-- Área de resultado de dados e botão de copiar -->
-            <div id="decript-box" class="decripto-container display-none">
-                <label class="descripto-label">
-                    <h2 id="cript-title" class="display-label">Criptografia Completa</h2>
-                    <h2 id="decript-title" class="display-label">Descriptografia Completa</h2>
-                </label>              
-                <textarea id="txt-decripto" class="txt-decripto" placeholder="Não há mensagem aqui" readonly></textarea>
-                <div class="btn-copy-container display-btn">
-                    <button id="btn-copy" class="btn-style btn-copy">Copiar!</button>
-                </div>
-            </div>
-
+    <main id="content">
+      <div class="wrapper">
+        <!-- Input -->
+        <div class="content-input">
+          <textarea
+            id="input-text"
+            class="input-text"
+            placeholder="Digite seu texto aqui"
+          ></textarea>
+          <p>
+            <i class="ph-warning-circle-thin"></i>Apenas letras minúsculas e sem
+            acento.
+          </p>
+          <div class="buttons">
+            <button id="btnEncrypt" class="button-style button-criptografar">
+              Criptografar!
+            </button>
+            <button id="btnDecrypt" class="button-style button-descriptografar">
+              Descriptografar!
+            </button>
+          </div>
         </div>
+
+        <!-- Output -->
+        <div class="content-output">
+          <div class="output-noMsg">
+            <div id="contentNoMessage" class="content-noMsg">
+              <h2>Nenhuma mensagem encontrada</h2>
+              <p>
+                Digite um texto que você deseja criptografar ou descriptografar.
+              </p>
+            </div>
+          </div>
+
+          <div id="hideOutput" class="hide-output display-option">
+            <div class="output-result">
+              <p id="output-text"></p>
+
+              <button id="btnCopy" class="button-style button-copy">
+                Copiar!
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
-
-    <!-- Rodapé -->
-    <footer class="footer">        
-        <div class="footer-copyright">
-            <p>Desenvolvido por Felipe F.</p>
-        </div>
-        <div class="footer-links">
-            <a href="https://www.linkedin.com/in/felipefsf" title="Felipe Ferreira | LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://github.com/felpfsf" title="felpfsf | Gihub" target="_blank"><i class="fa-brands fa-github-square"></i></a>
-            <a href="https://codepen.io/felpfsf" title="felpfsf | Codepen" target="_blank"><i class="fa-brands fa-codepen"></i></a>           
-        </div>
+    <footer>
+      <div class="wrapper">
+        <a class="logo" href="#"
+          ><img src="./assets/logo-alura.svg" alt="Alura's logo" />
+        </a>
+        <p>
+          ©2022 Desenvolvido por Felipe F.<br />
+          Todos os direitos reservados.
+        </p>
+        <ul class="social-links">
+          <li>
+            <a href="https://www.linkedin.com/in/felipefsf" target="_blank"
+              ><i class="ph-linkedin-logo-thin"></i
+            ></a>
+          </li>
+          <li>
+            <a href="https://github.com/felpfsf" target="_blank"
+              ><i class="ph-github-logo-thin"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
     </footer>
-
-    <!-- Lógica do APP -->
-    <script src="js/script.js"></script>
-</body>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
