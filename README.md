@@ -38,6 +38,10 @@ Um app que vai encriptografar e descriptografar frases.
             x------------------------------------------------------x
  
  
+ ## TESTE ELE AQUI
+ 
+ https://challenge-logica-alura-felpfsf.vercel.app/
+ 
 ## TO DO LIST (30/04/2022)
 
 - <s>Alterar o alert no js</s>
@@ -59,6 +63,10 @@ EN
 
 
 Develop an app that only accept small case letters with no special characters to encrypt or decrypt a message. The app will exchange the vogals <b>'a', 'e', 'o', 'u'</b> for <b>'ai', 'enter', 'imes', 'ober', 'ufat'</b> and the reverse will happen in case the user want to decrypt the message.
+
+## TEST HERE
+
+https://challenge-logica-alura-felpfsf.vercel.app/
 
 ## TO DO LIST (29/04/2022)
 
