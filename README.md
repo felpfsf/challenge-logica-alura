@@ -3,6 +3,9 @@
 Primeiro desafio da Alura
 
 Um app que vai encriptografar e descriptografar frases.
+
+![image](https://user-images.githubusercontent.com/2619027/176764059-28ef0f02-9307-4c72-a5e7-e0bf464385df.png)
+
 -->
 
 
